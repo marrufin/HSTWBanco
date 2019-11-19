@@ -15,6 +15,13 @@ class CreateClientesTable extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre', 100)->nullable(false);
+            $table->string('ap_paterno', 100)->nullable(false);
+            $table->string('ap_materno', 100)->nullable();
+            $table->date('fecha_nac')->nullable();
+            $table->string('curp', 50)->nullable(false);
+            $table->string('rfc', 50)->nullable();
+            $table->boolean("activo")->default(1)->nullable();
             $table->timestamps();
         });
     }
