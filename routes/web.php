@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/','HomeController@home');
+Route::match(['GET','POST'], '/login', 'Usuario\UserController@main')->name('login');
+
+Route::group(['prefix' => 'Administrador', 'middleware' => 'auth'], function(){
+    Route::match(['GET', 'POST', 'PUT'], '/clientes', 'Clientes\ClienteController@main');
 });
+
+Route::post('/logout', 'Usuario\UserController@logout');
