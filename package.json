@@ -20,6 +20,17 @@
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
-        "vue": "^2.5.17"
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "save": "^2.4.0",
+        "vee-validate": "^2.2.13",
+        "vue-dynamic-select": "^1.0.16",
+        "vue-loading-overlay": "^3.2.0",
+        "vue-select": "^3.2.0",
+        "vue-tables-2": "^1.5.45",
+        "vue2-datepicker": "^2.12.0",
+        "vuejs-noty": "^0.1.3"
     }
 }
