@@ -25,7 +25,7 @@
     <header class="main-header">
       <!-- Logo -->
       <a href="/" class="logo text-uppercase" style="padding:0;">
-          <img src="/panel/plugins/vegas/img/logoHSTW.png" width="50px" alt="">
+          <img src="/panel/plugins/vegas/img/logoHSTW3.png" width="50px" alt="">
           {{__('HSTW')}}
       </a>
       <!-- Header Navbar: style can be found in header.less -->

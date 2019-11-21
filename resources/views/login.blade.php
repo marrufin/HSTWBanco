@@ -29,7 +29,7 @@
                 <div style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)">
                     <div class="login-box">
                         <div class="login-logo" style="margin-bottom:5;">
-                            <img src="/panel/plugins/vegas/img/logo.png" width="200px">
+                            <img src="/panel/plugins/vegas/img/logo3.png" width="200px">
                             
                         </div>
                         <!-- /.login-logo -->
