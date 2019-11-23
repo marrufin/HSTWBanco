@@ -18,10 +18,10 @@ class CreateDireccionesTable extends Migration
             $table->unsignedBigInteger("cliente_id");
             $table->foreign("cliente_id")->references("id")->on('clientes');
             $table->string('calle', 50)->nullable(false);
-            $table->string('num_int', 10)->nullable();
-            $table->string('num_ext', 10)->nullable();
+            $table->integer('num_int')->nullable();
+            $table->integer('num_ext')->nullable();
             $table->string('entre_calles', 100)->nullable();
-            $table->string('codigo_postal', 15)->nullable();
+            $table->integer('codigo_postal')->nullable();
             $table->string('colonia', 100)->nullable(false);
             $table->string('ciudad', 100)->nullable(false);
             $table->string('estado', 100)->nullable(false);

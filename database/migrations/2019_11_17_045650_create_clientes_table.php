@@ -19,8 +19,8 @@ class CreateClientesTable extends Migration
             $table->string('ap_paterno', 100)->nullable(false);
             $table->string('ap_materno', 100)->nullable();
             $table->date('fecha_nac')->nullable();
-            $table->string('curp', 50)->nullable(false);
-            $table->string('rfc', 50)->nullable(false);
+            $table->string('curp', 50)->unique()->nullable(false);
+            $table->string('rfc', 50)->unique()->nullable(false);
             $table->boolean("activo")->default(1)->nullable();
             $table->timestamps();
         });

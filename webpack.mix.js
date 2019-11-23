@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/objects/settings.js', 'public/vendor/settings.js')
     .sass('resources/sass/app.scss', 'public/css')
     .styles([
         'public/panel/dist/css/AdminLTE.min.css',

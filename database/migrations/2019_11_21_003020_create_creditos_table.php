@@ -15,8 +15,8 @@ class CreateCreditosTable extends Migration
     {
         Schema::create('creditos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('cliente_id');
-            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->unsignedBigInteger('tarjeta_id');
+            $table->foreign('tarjeta_id')->references('id')->on('tarjetas');
             $table->boolean('tipo')->default(1)->nullable(false);
             $table->string('codigo')->nullable(false);
             $table->string('descripcion')->nullable();
