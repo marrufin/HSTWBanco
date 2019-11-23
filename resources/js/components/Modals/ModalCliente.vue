@@ -13,10 +13,10 @@
                             <form action="" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div :class="{'form-group': true, 'has-error': errors.has('fecha')}">
+                                        <div :class="{'form-group': true, 'has-error': errors.has('fecha_nac')}">
                                             <label class="control-label" for="text-input">Fecha de Nacimiento</label> <br>   
-                                            <date-picker name="fecha" v-model="cliente.fecha_nac" valueType="format" :lang="lang" type="date"></date-picker>   
-                                            <span v-show="errors.has('fecha')" class="help-block"><i v-show="errors.has('fecha')" class="fa fa-warning"></i> {{ errors.first('fecha') }}</span>                            
+                                            <date-picker name="fecha_nac" v-model="cliente.fecha_nac" valueType="format" :lang="lang" type="date"></date-picker>   
+                                            <span v-show="errors.has('fecha_nac')" class="help-block"><i v-show="errors.has('fecha_nac')" class="fa fa-warning"></i> {{ errors.first('fecha_nac') }}</span>                            
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -38,7 +38,7 @@
                                     <div class="col-md-6">
                                         <div :class="{'form-group': true, 'has-error': errors.has('ap_materno')}">
                                             <label class="control-label" for="text-input">Apellido Materno</label>
-                                            <input name="ap_materno" v-model="cliente.ap_materno" v-validate="{required:true, regex:/^[a-zA-Z-Á-ú\s]+$/, max:100}" class="form-control" type="text" placeholder="Apellido Materno">
+                                            <input name="ap_materno" v-model="cliente.ap_materno" v-validate="{required:false, regex:/^[a-zA-Z-Á-ú\s]+$/, max:100}" class="form-control" type="text" placeholder="Apellido Materno">
                                             <span v-show="errors.has('ap_materno')" class="help-block"><i v-show="errors.has('ap_materno')" class="fa fa-warning"></i> {{ errors.first('ap_materno') }}</span>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                     <div class="col-md-6">
                                         <div :class="{'form-group': true, 'has-error': errors.has('estado')}">
                                             <label class="control-label" for="text-input">Estado</label>
-                                            <input name="rfc" v-model="cliente.direccion.estado" v-validate="'numeric'" class="form-control" type="text" placeholder="Estado">
+                                            <input name="estado" v-model="cliente.direccion.estado" v-validate="'required|max:100'" class="form-control" type="text" placeholder="Estado">
                                             <span v-show="errors.has('estado')" class="help-block"><i v-show="errors.has('estado')" class="fa fa-warning"></i> {{ errors.first('estado') }}</span>
                                         </div>
                                     </div>
@@ -79,54 +79,54 @@
                                     <div class="col-md-6">
                                         <div :class="{'form-group': true, 'has-error': errors.has('ciudad')}">
                                             <label class="control-label" for="text-input">Ciudad</label>
-                                            <input name="curp" v-model="cliente.direccion.ciudad" v-validate="'required|numeric'" class= "form-control" type="text" placeholder="Ciudad">
+                                            <input name="ciudad" v-model="cliente.direccion.ciudad" v-validate="'required|max:100'" class= "form-control" type="text" placeholder="Ciudad">
                                             <span v-show="errors.has('ciudad')" class="help-block"><i v-show="errors.has('ciudad')" class="fa fa-warning"></i> {{ errors.first('ciudad') }}</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div :class="{'form-group': true, 'has-error': errors.has('colonia')}">
                                             <label class="control-label" for="text-input">Colonia</label>
-                                            <input name="rfc" v-model="cliente.direccion.colonia" v-validate="'numeric'" class="form-control" type="text" placeholder="Colonia">
-                                            <span v-show="errors.has('rfc')" class="help-block"><i v-show="errors.has('rfc')" class="fa fa-warning"></i> {{ errors.first('colonia') }}</span>
+                                            <input name="colonia" v-model="cliente.direccion.colonia" v-validate="'required|max:100'" class="form-control" type="text" placeholder="Colonia">
+                                            <span v-show="errors.has('colonia')" class="help-block"><i v-show="errors.has('colonia')" class="fa fa-warning"></i> {{ errors.first('colonia') }}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div :class="{'form-group': true, 'has-error': errors.has('curp')}">
+                                        <div :class="{'form-group': true, 'has-error': errors.has('calle')}">
                                             <label class="control-label" for="text-input">Calle</label>
-                                            <input name="curp" v-model="cliente.direccion.calle" v-validate="'required|numeric'" class= "form-control" type="text" placeholder="Calle">
-                                            <span v-show="errors.has('curp')" class="help-block"><i v-show="errors.has('curp')" class="fa fa-warning"></i> {{ errors.first('Calle') }}</span>
+                                            <input name="calle" v-model="cliente.direccion.calle" v-validate="'required|max:50'" class= "form-control" type="text" placeholder="Calle">
+                                            <span v-show="errors.has('calle')" class="help-block"><i v-show="errors.has('calle')" class="fa fa-warning"></i> {{ errors.first('calle') }}</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div :class="{'form-group': true, 'has-error': errors.has('rfc')}">
+                                        <div :class="{'form-group': true, 'has-error': errors.has('entre_calles')}">
                                             <label class="control-label" for="text-input">Entre calles</label>
-                                            <input name="rfc" v-model="cliente.direccion.entre_calles" v-validate="'numeric'" class="form-control" type="text" placeholder="Entre calles">
-                                            <span v-show="errors.has('rfc')" class="help-block"><i v-show="errors.has('rfc')" class="fa fa-warning"></i> {{ errors.first('rfc') }}</span>
+                                            <input name="entre_calles" v-model="cliente.direccion.entre_calles" v-validate="'max:100'" class="form-control" type="text" placeholder="Entre calles">
+                                            <span v-show="errors.has('entre_calles')" class="help-block"><i v-show="errors.has('entre_calles')" class="fa fa-warning"></i> {{ errors.first('entre_calles') }}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div :class="{'form-group': true, 'has-error': errors.has('curp')}">
+                                        <div :class="{'form-group': true, 'has-error': errors.has('num_int')}">
                                             <label class="control-label" for="text-input">Numero int.</label>
-                                            <input name="curp" v-model="cliente.direccion.num_int" v-validate="'required|numeric'" class= "form-control" type="text" placeholder="Número Interior">
-                                            <span v-show="errors.has('curp')" class="help-block"><i v-show="errors.has('curp')" class="fa fa-warning"></i> {{ errors.first('curp') }}</span>
+                                            <input name="num_int" v-model="cliente.direccion.num_int" v-validate="'numeric|max:10'" class= "form-control" type="text" placeholder="Número Interior">
+                                            <span v-show="errors.has('num_int')" class="help-block"><i v-show="errors.has('num_int')" class="fa fa-warning"></i> {{ errors.first('num_int') }}</span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div :class="{'form-group': true, 'has-error': errors.has('rfc')}">
+                                        <div :class="{'form-group': true, 'has-error': errors.has('num_ext')}">
                                             <label class="control-label" for="text-input">Número ext</label>
-                                            <input name="rfc" v-model="cliente.direccion.num_ext" v-validate="'numeric'" class="form-control" type="text" placeholder="Múmero Exterior">
-                                            <span v-show="errors.has('rfc')" class="help-block"><i v-show="errors.has('rfc')" class="fa fa-warning"></i> {{ errors.first('rfc') }}</span>
+                                            <input name="num_ext" v-model="cliente.direccion.num_ext" v-validate="'numeric|max:10'" class="form-control" type="text" placeholder="Múmero Exterior">
+                                            <span v-show="errors.has('num_ext')" class="help-block"><i v-show="errors.has('num_ext')" class="fa fa-warning"></i> {{ errors.first('num_ext') }}</span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div :class="{'form-group': true, 'has-error': errors.has('rfc')}">
+                                        <div :class="{'form-group': true, 'has-error': errors.has('cp')}">
                                             <label class="control-label" for="text-input">Código Postal</label>
-                                            <input name="rfc" v-model="cliente.direccion.cp" v-validate="'numeric'" class="form-control" type="text" placeholder="Código Postal">
-                                            <span v-show="errors.has('rfc')" class="help-block"><i v-show="errors.has('rfc')" class="fa fa-warning"></i> {{ errors.first('rfc') }}</span>
+                                            <input name="cp" v-model="cliente.direccion.codigo_postal" v-validate="'numeric|max:15'" class="form-control" type="text" placeholder="Código Postal">
+                                            <span v-show="errors.has('cp')" class="help-block"><i v-show="errors.has('cp')" class="fa fa-warning"></i> {{ errors.first('cp') }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default pull-left" @click="showModal = false">Cerrar</button>
-                        <button type="button" class="btn btn-primary" @click="actions">{{event ? "Guardar" : "Editar"}}</button>
+                        <button type="button" class="btn btn-primary" @click="actions">{{evento ? "Guardar" : "Editar"}}</button>
                     </div>
                 </div>
             </div>
@@ -156,19 +156,17 @@
         data(){
             return {
                 titulo_modal: "Agregar Cliente",
-                event: true,
+                evento: true,
                 cliente:{id:0, nombre:"", ap_paterno:"", ap_materno:"", curp:"", rfc:"", fecha_nac:"",
                         direccion:{id:0, pais:"", estado:"", ciudad:"", colonia:"",calle:"", entre_calles:"",num_int:"",
-                            num_ext:"",cp:""}},
+                        num_ext:"",codigo_postal:""}
+                        },
                 showModal: false,
                 lang: Settings.lang
             }
         },
         updated(){
             this.clearForm()
-        },
-        mounted(){
-    
         },
         methods:{
             obtenerClientes(){
@@ -182,14 +180,14 @@
             actions(){
                 this.$validator.validateAll().then((res) => {
                     if(res){
-                        if(this.event){
+                        if(this.evento){
                             axios.post(window.location.pathname, {
-                                'evt': 'create',
+                                'evento': 'crear',
                                 'cliente': this.cliente,
                             }).then(response => {
                                 this.showModal = false
                                 this.$noty.success(response.data.msg)
-                                this.$emit('event')
+                                this.$emit('evento')
                             }).catch((error) => {
                                 $.each(error.response.data.errors,(index, value) => {
                                     this.$noty.error(value)
@@ -199,11 +197,11 @@
                         else
                         {
                             axios.put(window.location.pathname, {
-                                'dato_alumno' : this.dato_alumno
+                                'cliente' : this.cliente
                             }).then(response => {
                                 this.showModal = false
                                 this.$noty.success(response.data.msg)
-                                this.$emit('event')
+                                this.$emit('evento')
                             }).catch((error) => {
                                 $.each(error.response.data.errors,(index, value) => {
                                     this.$noty.error(value)
@@ -216,10 +214,11 @@
                 });
             },
             clearForm(){
-                if(!this.showModal && this.event){
-                    for (const key in this.dato_alumno) {
-                        this.dato_alumno[key] = ""
+                if(!this.showModal && this.evento){
+                    for (const key in this.cliente) {
+                        this.cliente[key] = ""
                     }
+                    this.cliente.direccion = {}
                     this.$validator.pause()
                     this.$nextTick(() => this.$validator.resume())
                 }
@@ -227,3 +226,8 @@
         }
     }
 </script>
+<style lang="css" scoped>
+    [name="curp"] {
+        text-transform: uppercase;
+    }
+</style>

@@ -27,7 +27,7 @@
                 $roleUser = \Auth::user()->username
             @endphp
             <li>
-                <a href="{{$roleUser}}/clientes">
+                <a href="/{{$roleUser}}/clientes">
                     <i class="fa fa-users"></i>
                     <span>Gestionar Clientes</span>
                 </a>
