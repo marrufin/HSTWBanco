@@ -27,7 +27,7 @@ window.Vue.use(ClientTable, {
 }, false, 'bootstrap3', 'default')
 
 Validator.localize('es', es)
-Validator.localize()
+Validator.localize(Settings.dictionary)
 window.Vue.use(VeeValidate, {
     locale: 'es'
 })

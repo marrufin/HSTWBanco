@@ -32,22 +32,13 @@ export const Settings = {
     dictionary: {
         es: {
             attributes: {
-                apellido_paterno: 'apellido paterno',
-                apellido_materno: 'apellido materno',
-                tipo_persona: 'tipo persona',
-                password: 'contraseña',
-                descripcion: 'descripción',
-                categoria_vista: 'categoría vista',
-                duracion: 'duración',
-                numero_grado: 'N° de grado',
-                tipo_grado_id: 'tipo de grado',
-                metodo: 'método',
-                fecha_inicio: 'fecha de inicio',
-                fecha_termino: 'fecha de termino',
-                num_unidades: 'N° de unidades',
-                creditos: 'créditos',
-                categorias_id: 'categoría',
-                niveles_id: 'nivel'
+                ap_paterno: 'apellido paterno',
+                ap_materno: 'apellido materno',
+                entre_calles: 'entre calles',
+                fecha_nac: 'fecha de nacimiento',
+                num_int: 'número interior',
+                num_ext: 'número exterior',
+                cp: 'código postal'
             }
         }
     },
