@@ -47,14 +47,14 @@
                                     <div class="col-md-6">
                                         <div :class="{'form-group': true, 'has-error': errors.has('curp')}">
                                             <label class="control-label" for="text-input">CURP</label>
-                                            <input name="curp" v-model="cliente.curp" v-validate="'required|max:50'" class= "form-control" type="text" placeholder="CURP">
+                                            <input name="curp" v-model="cliente.curp" v-validate="'required|max:18'" class= "form-control" type="text" placeholder="CURP">
                                             <span v-show="errors.has('curp')" class="help-block"><i v-show="errors.has('curp')" class="fa fa-warning"></i> {{ errors.first('curp') }}</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div :class="{'form-group': true, 'has-error': errors.has('rfc')}">
                                             <label class="control-label" for="text-input">RFC</label>
-                                            <input name="rfc" v-model="cliente.rfc" v-validate="'required|max:50'" class="form-control" type="text" placeholder="RFC">
+                                            <input name="rfc" v-model="cliente.rfc" v-validate="'required|max:13'" class="form-control" type="text" placeholder="RFC">
                                             <span v-show="errors.has('rfc')" class="help-block"><i v-show="errors.has('rfc')" class="fa fa-warning"></i> {{ errors.first('rfc') }}</span>
                                         </div>
                                     </div>
@@ -125,7 +125,7 @@
                                     <div class="col-md-4">
                                         <div :class="{'form-group': true, 'has-error': errors.has('cp')}">
                                             <label class="control-label" for="text-input">Código Postal</label>
-                                            <input name="cp" v-model="cliente.direccion.codigo_postal" v-validate="'numeric|max:15'" class="form-control" type="text" placeholder="Código Postal">
+                                            <input name="cp" v-model="cliente.direccion.codigo_postal" v-validate="'numeric|max:5'" class="form-control" type="text" placeholder="Código Postal">
                                             <span v-show="errors.has('cp')" class="help-block"><i v-show="errors.has('cp')" class="fa fa-warning"></i> {{ errors.first('cp') }}</span>
                                         </div>
                                     </div>

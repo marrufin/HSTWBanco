@@ -16,6 +16,7 @@ Route::match(['GET','POST'], '/login', 'Usuario\UserController@main')->name('log
 
 Route::group(['prefix' => 'Administrador', 'middleware' => 'auth'], function(){
     Route::match(['GET', 'POST', 'PUT'], '/clientes', 'Clientes\ClienteController@main');
+    Route::match(['GET', 'POST', 'PUT'], '/prestamos','Prestamos\PrestamosController@main');
 });
 
 Route::post('/logout', 'Usuario\UserController@logout');
