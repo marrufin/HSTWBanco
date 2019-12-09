@@ -13,12 +13,14 @@ class DatabaseSeeder extends Seeder
     {
         $this->truncateTables([
             'roles',
-            'users'
+            'users',
+            'marca_tarjeta'
         ]);
 
         $this->call([
             RoleSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            MarcaTarjetaSeeder::class
         ]);
     }
 
