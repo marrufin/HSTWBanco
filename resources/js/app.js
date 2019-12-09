@@ -49,6 +49,7 @@ Vue.component('dashboard-component', require('./components/DashboardComponent.vu
 Vue.component('cliente-component', require('./components/ClienteComponent.vue').default);
 Vue.component('modal-cliente-component', require('./components/Modals/ModalCliente.vue').default);
 Vue.component('prestamo-component', require('./components/PrestamoComponent.vue').default);
+Vue.component('cobranza-component', require('./components/CobranzaComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

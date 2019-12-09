@@ -151,7 +151,7 @@ var Settings = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\BancoHSTW\HSTWBanco\resources\js\objects\settings.js */"./resources/js/objects/settings.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\BancoHTSW\HSTWBanco\resources\js\objects\settings.js */"./resources/js/objects/settings.js");
 
 
 /***/ })
