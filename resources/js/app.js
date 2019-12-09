@@ -15,12 +15,15 @@ import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/vue-loading.css'
 import vSelect from 'vue-select'
 import { Settings } from './objects/settings.js'
+import VueTheMask from 'vue-the-mask'
 
 window.Vue.use(VueNoty, {
     timeout: 3500,
     progressBar: true,
     layout: 'bottomRight'
 })
+
+window.Vue.use(VueTheMask)
 
 window.Vue.use(ClientTable, {
     texts: Settings.texts
@@ -48,6 +51,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('dashboard-component', require('./components/DashboardComponent.vue').default);
 Vue.component('cliente-component', require('./components/ClienteComponent.vue').default);
 Vue.component('modal-cliente-component', require('./components/Modals/ModalCliente.vue').default);
+Vue.component('tarjeta-component', require('./components/TarjetaComponent.vue').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
