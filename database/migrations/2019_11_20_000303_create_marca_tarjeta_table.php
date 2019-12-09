@@ -15,7 +15,7 @@ class CreateMarcaTarjetaTable extends Migration
     {
         Schema::create('marca_tarjeta', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre', 15)->nullable(false);
+            $table->string('nombre', 100)->nullable(false);
             $table->string('descripcion', 50)->nullable();
             $table->timestamps();
         });

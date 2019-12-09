@@ -20,7 +20,8 @@ class CreateTarjetasTable extends Migration
             $table->unsignedBigInteger('marca_id');
             $table->foreign('marca_id')->references('id')->on('marca_tarjeta');
             $table->string('numero', 16)->nullable(false);
-            $table->date("fecha_vencimiento")->nullable(false);
+            $table->string('mes_vencimieto')->nullable(false);
+            $table->string('anio_vencimiento')->nullable(false);
             $table->integer('tipo')->default(1)->nullable(false);
             $table->timestamps();
         });
