@@ -57,7 +57,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/{{$roleUser}}/tarjetas">
                     <i class="fa fa-credit-card"></i>
                     <span>Tarjetas de crédito</span>
                 </a>

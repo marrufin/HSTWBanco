@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <h3 class="box-title">Información de clientes</h3>
                     </div>
-                    <!-- /.box-header -->
+                    <!-- /.box-header  -->
                     <div class="box-body">
                         <v-client-table :data="clientes" :columns="columns" :options="options">
                             <button slot="acciones" slot-scope="props" type="button" @click="mostrarModalOpciones(false, props.row)" class="btn btn-info btn-sm">
@@ -91,8 +91,7 @@
                         acciones: 'Acciones'
                     },
                     sortable: ['nombre', 'ap_paterno', 'ap_materno'],
-                    filterable: ['nombre', 'ap_paterno', 'ap_materno', 'rfc', 'curp'],
-                    
+                    filterable: ['nombre', 'ap_paterno', 'ap_materno', 'rfc', 'curp']                 
                 }
             }
         },
@@ -106,7 +105,6 @@
                 }) 
             },
             mostrarModalOpciones(opc, datos = ""){
-                console.log(datos);
                 this.$refs.modalCliente.evento = opc
                 this.$refs.modalCliente.titulo_modal = opc ? "Agregar Cliente" : "Editar Cliente"
                 this.$refs.modalCliente.cliente = datos == "" ? datos = this.cliente : datos = datos;
