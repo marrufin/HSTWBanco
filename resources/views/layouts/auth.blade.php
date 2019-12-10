@@ -63,7 +63,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/{{$roleUser}}/cobranza">
                     <i class="fa fa-money"></i>
                     <span>Área de Cobranza</span>
                 </a>
