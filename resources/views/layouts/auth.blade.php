@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/{{$roleUser}}/asignar">
                     <i class="fa fa-briefcase"></i>
                     <span>Asignar Préstamos</span>
                 </a>

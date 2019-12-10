@@ -54,7 +54,7 @@ Vue.component('modal-cliente-component', require('./components/Modals/ModalClien
 Vue.component('tarjeta-component', require('./components/TarjetaComponent.vue').default)
 Vue.component('prestamo-component', require('./components/PrestamoComponent.vue').default);
 Vue.component('cobranza-component', require('./components/CobranzaComponent.vue').default);
-
+vue.component('asignarprestamos-component', require('./components/AsignarPrestamos.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
