@@ -50,7 +50,7 @@
 <script>
     import ModalAsigPrestamo from '../components/Modals/ModalAsigPrestamo.vue'
     import { Settings } from '../objects/settings'
-    import jsPDF from 'jspdf'
+    //import jsPDF from 'jspdf'
     export default {
         components:{
             ModalAsigPrestamo
@@ -108,7 +108,7 @@
 
 
                 let pdfName = 'Asignacion del Prestamo';
-                var dec = new jsPDF();
+                //var dec = new jsPDF();
                 dec.text("Nombre del Cliente: " + dat_nom,10,10);
                 dec.text("CURP del Cliente: " + dat_curp,10,20);
                 dec.text("Fecha: " + dat_date,150,30);
