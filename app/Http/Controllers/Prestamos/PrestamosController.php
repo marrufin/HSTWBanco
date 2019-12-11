@@ -30,8 +30,11 @@ class PrestamosController extends Controller
         return Cliente::with('direccion')->get();
     }
 
-    public function crearPdf(){
-        $pdf = PDF::loadView('layouts.PDF.calcular_prestamo', compact('data'));
-        return $pdf->stream();
+    public function crearPdf(Request $request){
+        $data = Cliente::where('id', $request->id)->with('prestamo', 'direccion')->get();
+        if(!empty($data)){
+            $pdf = PDF::loadView('layouts.PDF.calcular_prestamo', compact('data'));
+            return $pdf->stream();
+        }
     }
 }

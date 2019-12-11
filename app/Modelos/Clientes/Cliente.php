@@ -13,4 +13,8 @@ class Cliente extends Model
     public function direccion(){
         return $this->hasOne('App\Modelos\Clientes\Direccion', 'cliente_id', 'id');
     }
+
+    public function prestamo(){
+        return $this->hasOne('App\Modelos\Prestamos\Prestamo', 'cliente_id', 'id');
+    }
 }

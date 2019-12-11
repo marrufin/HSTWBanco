@@ -10,18 +10,18 @@
     <div style="display:table;">
         <div style="display:table-row">
             <div style="display:table-cell">
-                <img style="margin:0;padding:0;" src="panel/plugins/vegas/img/logo3.png" width="100px" alt="">
+                <img style="margin:0;padding:0;" src="panel/plugins/vegas/img/logo3.png" width="200px" alt="">
             </div>
         </div>
         <div style="display:table-row">
             <div style="display:table-cell">
                  <br>
-                Banco THSW
+                Banco HSTW <br>
                 Universidad Tecnologica de Torreón <br>
-                Torreón Coahuila <br>
+                Torreón Coahuila, México <br>
                 N°: @yield('folio')<br>
                 Ref: @yield('reference')<br>
-                Secc.D. Nacional <br>
+                Calculo de préstamos<br>
             </div>
         </div>
     </div>

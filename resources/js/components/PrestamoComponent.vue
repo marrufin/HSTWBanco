@@ -11,7 +11,7 @@
                         <!-- /.box-header -->
                         <div class="box-body">
                             <v-client-table :data="clientes" :columns="columns" :options="options">
-                                <button slot="acciones" type="button" @click="crearPDF" class="btn btn-danger btn-sm">
+                                <button slot="acciones" slot-scope="prop" type="button" @click="crearPDF(prop.row)" class="btn btn-danger btn-sm">
                                     <i class=" glyphicon glyphicon-paperclip "></i> &nbsp; PDF
                                 </button> &nbsp;
                                 <template>
@@ -83,10 +83,10 @@
                     },  1000) 
                 }) 
             },
-            crearPDF(){
+            crearPDF(data){
                 let x = screen.width/2  - 500/2
                 let y = screen.height/2 - 650/2
-                window.open(`${window.location.pathname}?id=1`,
+                window.open(`${window.location.pathname}?id=${data.id}`,
                 'Reporte',
                 'location=1,status=1,scrollbars=1,width=500,height=600,left='+ x + ', top='+ y)
             }

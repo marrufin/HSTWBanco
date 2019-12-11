@@ -8,5 +8,5 @@ class Tarjeta extends Model
 {
     protected $table = "tarjetas";
 
-    protected $fillable = ['cliente_id', 'marca_id', 'numero', 'mes_vencimieto','tipo','anio_vencimiento'];
+    protected $fillable = ['cliente_id', 'marca_id', 'numero', 'mes_vencimiento','tipo','anio_vencimiento'];
 }
