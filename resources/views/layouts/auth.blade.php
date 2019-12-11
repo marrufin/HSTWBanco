@@ -33,25 +33,25 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/{{$roleUser}}/prestamos">
                     <i class="fa fa-money"></i>
                     <span>Calcular Préstamos</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/{{$roleUser}}/buro">
                     <i class="fa fa-bank"></i>
                     <span>Verificar Buró</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/{{$roleUser}}/report">
                     <i class="fa fa-bar-chart"></i>
                     <span>Reportes</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/{{$roleUser}}/asignar-prestamos">
                     <i class="fa fa-briefcase"></i>
                     <span>Asignar Préstamos</span>
                 </a>

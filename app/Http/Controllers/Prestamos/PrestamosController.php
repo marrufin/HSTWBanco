@@ -5,12 +5,16 @@ namespace App\Http\Controllers\Prestamos;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Modelos\Clientes\Cliente;
+use PDF;
 
 class PrestamosController extends Controller
 {
     public function main(Request $request){
         switch ($request->method()){
             case 'GET';
+                if($request->id){
+                    return $this->crearPdf($request);
+                }
                 return $this->vista();
             case 'POST':
                 return $this->obtenerClientes();
@@ -24,5 +28,10 @@ class PrestamosController extends Controller
 
     private function obtenerClientes(){
         return Cliente::with('direccion')->get();
+    }
+
+    public function crearPdf(){
+        $pdf = PDF::loadView('layouts.PDF.calcular_prestamo', compact('data'));
+        return $pdf->stream();
     }
 }

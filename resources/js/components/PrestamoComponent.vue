@@ -44,7 +44,7 @@
 <script>
     import ModalCliente from '../components/Modals/ModalCliente.vue'
     import { Settings } from '../objects/settings'
-    import jsPDF from 'jspdf'
+    //import jsPDF from 'jspdf'
     export default {
         mounted() {     
             this.obtenerClientes()
@@ -84,11 +84,11 @@
                 }) 
             },
             crearPDF(){
-                let pdfName = 'test';
-                var dec = new jsPDF();
-                dec.text("Hello",10,10);
-                dec.save(pdfName + '.pdf');
-                console.log(dec.text);
+                let x = screen.width/2  - 500/2
+                let y = screen.height/2 - 650/2
+                window.open(`${window.location.pathname}?id=1`,
+                'Reporte',
+                'location=1,status=1,scrollbars=1,width=500,height=600,left='+ x + ', top='+ y)
             }
 
         }
